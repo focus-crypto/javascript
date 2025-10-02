@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <p>Bejelentkezés</p>
+      <input type="email" name="E-mail address" id="emailInput" />
+      <br />
+      <p>Jelszó</p>
+      <input type="password" name="Password" id="password1" />
+      <br />
+      <p>Jelszó megint</p>
+      <input type="password" name="Password again" id="password2" />
+      <br />
+      <button onclick="regisztralas()">Regisztrálás</button>
+    </div>
+    <script>
+      function regisztralas() {
+        const email = document.getElementById("emailInput").value;
+        const password1 = document.getElementById("password1").value;
+        const password2 = document.getElementById("password2").value;
+
+        if (email == "" || password1 == "" || password2 == "") {
+          alert("írd be az adatokat");
+        } else if (
+          !email.includes("@") ||
+          !email.includes(".") ||
+          !(email.split(".")[1].length > 1 && email.split(".")[1].length < 4)
+        ) {
+          alert("Az emailcím nem megfelelő");
+        } else if (password1 != password2) {
+          alert("nem egyeznek a jleszavak");
+        } else {
+          alert("Minden működik");
+        }
+      }
+    </script>
+  </body>
+</html>
