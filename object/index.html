@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IH — Nyári programok</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>IH — Nyári programok</h1>
+
+    <div>
+      <label>Feladat neve: <input id="neve" /></label>
+      <label>Leírás: <input id="leirasa" /></label>
+      <label>Időpont: <input id="datuma" /></label>
+    </div>
+
+    <div>
+      <button onclick="gombUj()">Hozzáad</button>
+    </div>
+
+    <table id="tasksTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Név</th>
+          <th>Leírás</th>
+          <th>Időpont</th>
+          <th>Törlés</th>
+          <th>Módósítás</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script src="app.js"></script>
+  </body>
+</html>
